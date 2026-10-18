@@ -1,0 +1,10 @@
+#!name = WZPP - Loon
+#!desc = WZPP response script from external source
+#!date = 2026-10-18
+#!type = normal
+
+[Script]
+response if ${url} ~= /^https?:\/\/bzpp3\.iwzbz\.com\/api\/v1\.1\/user\/getvipinfo_nv1?/ then script("https://raw.githubusercontent.com/iosDG001/_/refs/heads/main/WZPP.js") with tag="WZPP", enable=true, requires_body=true, timeout=20
+
+[Mitm]
+hostname = bzpp3.iwzbz.com
